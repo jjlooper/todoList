@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
     def index
-        @todos - Todo.all
+        @todos = Todo.all
     end
     
     def new
@@ -9,7 +9,7 @@ class TodosController < ApplicationController
     
     def create
         @todo = Todo.create(todo_params)
-        redirect_to roddos_path
+        redirect_to todos_path
     end
     
     private
